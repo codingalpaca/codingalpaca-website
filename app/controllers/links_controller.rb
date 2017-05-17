@@ -23,6 +23,11 @@ class LinksController < ApplicationController
   end
 
   def update
+    if @link.update link_params
+      redirect_to links_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
