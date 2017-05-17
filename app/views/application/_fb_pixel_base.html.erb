@@ -1,3 +1,4 @@
+<% if Rails.env.production? %>
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -13,3 +14,4 @@ src="https://www.facebook.com/tr?id=411196049260849&ev=PageView&noscript=1"
 /></noscript>
 <!-- DO NOT MODIFY -->
 <!-- End Facebook Pixel Code -->
+<% end %>
