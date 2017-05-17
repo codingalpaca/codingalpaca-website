@@ -1,5 +1,7 @@
 {
   "name": "codingalpaca-website",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.4.1"
+  }
 }
