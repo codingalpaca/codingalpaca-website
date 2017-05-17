@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+  before_action :authenticate_user!, expect: :show
   before_action :set_link, only: [:edit, :update, :destroy]
 
   def index
