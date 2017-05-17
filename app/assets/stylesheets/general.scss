@@ -4,3 +4,19 @@ a {
     vertical-align: middle;
   }
 }
+
+// form
+.field {
+  .input {
+    transition: border-color .25s linear;
+  }
+
+  // error messages
+  .field_with_errors {
+    margin-bottom: 0.5em;
+
+    .input {
+      border-color: $red;
+    }
+  }
+}
