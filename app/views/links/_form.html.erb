@@ -10,6 +10,13 @@
     </div>
 
     <div class="field">
+      <%= f.label :pixel_event_name, 'Pixel Event Name', class: 'label' %>
+      <div class="control">
+        <%= f.text_field :pixel_event_name, class: 'input', required: true %>
+      </div>
+    </div>
+
+    <div class="field">
       <%= f.label :target_url, '導向網址', class: 'label' %>
       <div class="control">
         <%= f.text_field :target_url, value: (f.object.target_url || 'http://'), class: 'input', required: true %>
