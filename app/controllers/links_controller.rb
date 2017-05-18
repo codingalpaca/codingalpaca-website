@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :set_link, only: [:edit, :update, :destroy]
+  before_action :set_link, only: [:show, :edit, :update, :destroy]
 
   def index
     @links = Link.all
@@ -33,6 +33,11 @@ class LinksController < ApplicationController
   def destroy
     @link.destroy
     redirect_to links_path
+  end
+
+  def show
+    # remove layout to speed up
+    render file: 'links/show', layout: false
   end
 
   private
