@@ -13,4 +13,5 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery/dist/jquery.min.js
+//= require clipboard/dist/clipboard.min.js
 //= require_tree .

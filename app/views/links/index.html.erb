@@ -29,9 +29,18 @@
         <td>
           <%= link_to 'Edit', edit_link_path(link) %> |
           <%= link_to 'Delete', link_path(link),
-                      method: :delete, data: { confirm: 'Sure?' } %>
+                      method: :delete, data: { confirm: 'Sure?' } %> |
+          <button class="clipboard button is-primary is-outlined is-small" data-clipboard-text="<%= link_url(link) %>">
+            Copy Link to Clipboard
+          </button>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<script>
+  $(document).ready(function(){
+    new Clipboard('.clipboard');
+  });
+</script>
