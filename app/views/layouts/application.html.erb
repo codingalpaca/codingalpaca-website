@@ -11,8 +11,16 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <header>
+        login as: <%= current_user.name %> |
+        <%= link_to 'log out', logout_path, method: :delete %>
+      </header>
+    <% end %>
+
     <section class="section">
       <div class="container">
+        <%= render 'flash_message' %>
         <%= yield %>
       </div>
     </section>

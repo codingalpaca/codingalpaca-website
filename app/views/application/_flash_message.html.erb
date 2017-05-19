@@ -1,0 +1,19 @@
+<% if flash.any? %>
+  <% flash.each do |key, msg| %>
+    <div class="notification <%= "is-#{key}" %>">
+      <button class="delete"></button>
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
+
+<script>
+  $(document).ready(function(){
+    $('.notification button').off('click').click(function(e){
+      e.preventDefault();
+
+      $(this).parent().fadeOut();
+    });
+  });
+</script>
+
