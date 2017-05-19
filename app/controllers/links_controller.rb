@@ -49,11 +49,4 @@ class LinksController < ApplicationController
   def set_link
     @link = Link.find params[:id]
   end
-
-  def authenticate_user!
-    unless current_user
-      flash[:danger] = 'Please login first!'
-      redirect_to login_path
-    end
-  end
 end
