@@ -23,7 +23,7 @@
         <td><%= link.pixel_event_name %></td>
         <td>
           <%= link_to link.target_url, target: '_blank' do %>
-            <%= link.target_url %>
+            <%= truncate link.target_url, length: 45 %>
             <i class="fa fa-external-link" aria-hidden="true"></i>
           <% end %>
         </td>
