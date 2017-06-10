@@ -1,8 +1,5 @@
-// overwrite default font path
-$fa-font-path: "font-awesome/fonts/";
-
 // third party plugins
-@import "font-awesome/scss/font-awesome";
+@import "font-awesome";
 @import "bulma/bulma";
 
 // custom css files
