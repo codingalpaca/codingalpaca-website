@@ -37,6 +37,8 @@ class LinksController < ApplicationController
   end
 
   def show
+    @link.increment! :counter
+
     # remove layout to speed up
     render file: 'links/show', layout: false
   end
