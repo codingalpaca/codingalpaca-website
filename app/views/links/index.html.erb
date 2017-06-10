@@ -11,6 +11,7 @@
       <th>Title</th>
       <th>Pixel Event Name</th>
       <th>Target URL</th>
+      <th>Counter</th>
       <th>Management</th>
     </tr>
   </thead>
@@ -27,11 +28,24 @@
           <% end %>
         </td>
         <td>
-          <%= link_to 'Edit', edit_link_path(link) %> |
-          <%= link_to 'Delete', link_path(link),
-                      method: :delete, data: { confirm: 'Sure?' } %> |
-          <button class="clipboard button is-primary is-outlined is-small" data-clipboard-text="<%= link_url(link) %>">
-            Copy Link to Clipboard
+          <%= link.counter %>
+        </td>
+        <td>
+          <%= link_to edit_link_path(link), class: 'button is-primary is-inverted' do %>
+            <span class="icon is-small">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </span>
+          <% end %>
+          <%= link_to link_path(link), method: :delete,
+                      data: { confirm: 'Sure?' }, class: 'button is-danger is-inverted' do %>
+            <span class="icon is-small">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </span>
+          <% end %>
+          <button class="clipboard button is-info is-inverted" data-clipboard-text="<%= link_url(link) %>">
+            <span class="icon is-small">
+              <i class="fa fa-files-o" aria-hidden="true"></i>
+            </span>
           </button>
         </td>
       </tr>
